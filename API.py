@@ -17,7 +17,7 @@ from fastapi import FastAPI, File, UploadFile
 app = FastAPI()
 
 # Configuration
-GOOGLE_API_KEY = 'AIzaSyA2WeVQgptuhkCsfmwGfsQLlhUSDI3nwHQ'  # Replace with your actual key
+GOOGLE_API_KEY = 'AIzaSyAYvIqziu1Zvihh12vmsBfW15WnOFEKzEo'  # Replace with your actual key
 genai.configure(api_key=GOOGLE_API_KEY)
 
 class AnalysisResult(BaseModel):
