@@ -6,3 +6,4 @@ rich==13.8.1
 ipython==8.29.0
 fastapi
 uvicorn
+python-multipart
