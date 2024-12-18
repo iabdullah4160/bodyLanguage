@@ -11,6 +11,7 @@ from IPython.display import Markdown
 from pydantic import BaseModel
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
+import whisper
 
 
 # Setup FastAPI application
