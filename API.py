@@ -9,7 +9,6 @@ from rich import print as rprint
 from colorama import init, Fore, Style
 from IPython.display import Markdown
 from pydantic import BaseModel
-import nest_asyncio
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
 
