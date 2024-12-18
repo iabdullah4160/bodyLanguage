@@ -35,7 +35,7 @@ async def process_video(file: UploadFile = File(...)):
         video_file.write(await file.read())
 
     # Extract audio from the video
-    audio_file_path = video_file_path.replace('.mp4', '.mp3')
+    audio_file_path = os.path.join("tmp", "Test-1.mp3")
     print(audio_file_path)
     video_clip = VideoFileClip(video_file_path)
     video_clip.audio.write_audiofile(audio_file_path)
