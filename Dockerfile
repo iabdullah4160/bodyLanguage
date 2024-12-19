@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y git
 COPY requirements.txt /app/
 
 # Install the Python dependencies
-RUN pip install --no-cache-dir --prefer-binary -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the FastAPI app code into the container
 COPY API.py /app/
