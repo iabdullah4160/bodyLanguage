@@ -5,8 +5,8 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Install git and ffmpeg, then clean up apt cache to reduce image size
-RUN apt-get update && \
-    apt-get install -y git ffmpeg
+# RUN apt-get update && \
+  #  apt-get install -y git ffmpeg
 
 # Copy only the requirements file first to take advantage of layer caching
 COPY requirements.txt /app/
