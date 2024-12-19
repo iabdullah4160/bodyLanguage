@@ -1,3 +1,9 @@
 fastapi
 uvicorn
 python-multipart
+git+https://github.com/openai/whisper.git
+google-generativeai==0.8.3
+colorama==0.4.6
+rich==13.8.1
+ipython==8.29.0
+ffmpeg
