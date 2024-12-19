@@ -1,27 +1,27 @@
-import os
-import time
-import json
-from moviepy.editor import VideoFileClip
-import google.generativeai as genai
-from rich.console import Console
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
-from rich import print as rprint
-from colorama import init, Fore, Style
-from IPython.display import Markdown
+#import os
+#import time
+#import json
+#from moviepy.editor import VideoFileClip
+#import google.generativeai as genai
+#from rich.console import Console
+#from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
+#from rich import print as rprint
+#from colorama import init, Fore, Style
+#from IPython.display import Markdown
 from pydantic import BaseModel
 import uvicorn
 from fastapi import FastAPI, File, UploadFile, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
-import whisper
-from starlette.responses import JSONResponse
+# import whisper
+# from starlette.responses import JSONResponse
 
 
 # Setup FastAPI application
 app = FastAPI()
 
 # Configuration
-GOOGLE_API_KEY = 'AIzaSyAYvIqziu1Zvihh12vmsBfW15WnOFEKzEo'  # Replace with your actual key
-genai.configure(api_key=GOOGLE_API_KEY)
+# GOOGLE_API_KEY = 'AIzaSyAYvIqziu1Zvihh12vmsBfW15WnOFEKzEo'  # Replace with your actual key
+# genai.configure(api_key=GOOGLE_API_KEY)
 
 class AnalysisResult(BaseModel):
     transcription: str
