@@ -19,6 +19,14 @@ from fastapi.middleware.cors import CORSMiddleware
 # Setup FastAPI application
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins or set specific domains
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
+
 # Configuration
 # GOOGLE_API_KEY = 'AIzaSyAYvIqziu1Zvihh12vmsBfW15WnOFEKzEo'  # Replace with your actual key
 # genai.configure(api_key=GOOGLE_API_KEY)
