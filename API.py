@@ -30,9 +30,6 @@ class AnalysisResult(BaseModel):
 
 @app.post("/process_video", status_code=status.HTTP_200_OK)
 async def process_video(file: UploadFile = File(...)):
-    # Validate the uploaded file
-    if not file.filename.endswith(('.mp4', '.mov', '.avi')):
-        raise HTTPException(status_code=400, detail="Invalid file format. Only video files are allowed.")
 
     try:
         # Save the uploaded video file temporarily
