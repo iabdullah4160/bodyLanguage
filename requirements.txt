@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 python-multipart
+moviepy==1.0.3
 git+https://github.com/openai/whisper.git
 google-generativeai==0.8.3
 colorama==0.4.6
