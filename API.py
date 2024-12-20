@@ -39,7 +39,6 @@ class AnalysisResult(BaseModel):
 
 @app.post("/process_video", status_code=status.HTTP_200_OK)
 async def process_video(file: UploadFile = File(...)):
-    return {'message' : 'success'}
     try:
         # Save the uploaded video file temporarily
         video_file_path = file.filename
