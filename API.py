@@ -27,8 +27,9 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-# Configuration
-GOOGLE_API_KEY = 'AIzaSyAYvIqziu1Zvihh12vmsBfW15WnOFEKzEo'  # Replace with your actual key
+# Get the value of an environment variable
+GOOGLE_API_KEY = os.getenv("GEMINI_API")
+
 genai.configure(api_key=GOOGLE_API_KEY)
 
 class AnalysisResult(BaseModel):
